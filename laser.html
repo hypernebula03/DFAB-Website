@@ -3,27 +3,77 @@
 
 <head>
  <link rel="stylesheet" type="text/css" href="style.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+      
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-
-<!-- Side navigation (to be copy pasted for every page) -->
-<div class="sidenav">
-  <a href="index.html">Home</a>
-  <a href="Introduction.html">Introduction</a>
-  <a href="safety.html">Fablab Safety</a>
-  <a href="software.html">Software</a>
-  <a href="finalproject.html">Final Project</a>
-  <a href="credits.html">Credits</a>
-    <div class="dropdown">
-      <button class="dropbtn">Assignments
-      </button>
-      <div class="dropdown-content">
-        <a href="cad.html">Computer Aided Design</a>
-        <a href="ccc.html">Computer Controlled Cutting</a>
-        <a href="3d.html">3D Prining</a>
-        <a class="active" href="laser.html">Laser Cutting</a>
-        <a href="embedprogramming.html">Embedded Programming</a>
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="index.html">Home</a>
+      <a class="nav-item nav-link active" href="Introduction.html">Introduction</a>
+      <a class="nav-item nav-link" href="safety.html">Fablab Safety</a>
+      <a class="nav-item nav-link" href="software.html">Software</a>
+      <a class="nav-item nav-link" href="finalproject.html">Final Project</a>
+      <a class="nav-item nav-link" href="credits.html">Credits</a>
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Assignment
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="cad.html">Computer Aided Design</a>
+          <a class="dropdown-item" href="ccc.html">Computer Controlled Cutting</a>
+          <a class="dropdown-item" href="3d.html">3D Prining</a>
+          <a class="dropdown-item" href="laser.html">Laser Cutting</a>
+          <a class="dropdown-item" href="embedprogramming.html">Embedded Programming</a>
+        </div>
       </div>
     </div>
+</nav>
+<body>
+  <p> An assignment given was to create a knight chess piece with the following dimensions: 
+    <ul>
+      <li>30mm base diameter</li>
+      <li>50mm height</li>
+      <li>5mm head thickness</li>
+      <li>Hollowed base</li>
+    </ul>30mm base diameter, 
+  </p>
+  <p>
+    With our completed 3D model, we have to export each face of the box into a DXF File.<br>
+    Next, we import our DXF files into CorelDraw to do our final preparations, which include the following:
+    (machine is epilog fusion pro, 3.9mm plywood, 25 speed 80 power 20 frequency 80% engraving power, including deco image)<br>
+    Below is how the final product looks like, before and after assembly. <br>
+    (insert both pics)<br>
+    Although the process was mostly smooth due to Mr Rodney Dorville being there to supervise us, there were some things
+    that cropped up. One issue was that the decoration image was too large and had to be resized. It was also a fake PNG image 
+    (it had a very light grey background) in which I had to edit the image using GIMP to ensure the laser cutting machine would only detect
+    the sections I want engraved. <br>
+    In addition, the laser cutting machine went through some sections twice during the cutting process, causing the wood to look
+    slightly burnt.<br>
+    (show image)
 
-</div>
+  </p>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossorigin="anonymous"></script>
+</body>
+
 </html>
