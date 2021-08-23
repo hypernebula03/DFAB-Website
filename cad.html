@@ -76,53 +76,62 @@
     and extruded as a "Cut" function instead of a "New Body" function.
     <img src="./images/3D printing/earsketch.png"width="80%"> <br>
     <img src="./images/3D printing/ear.png"width="80%"> <br>
-    With that, the Knight Chess Piece model is finished. Below is the embedded 3D model itself.
-    (insert model file)<br>
+    With that, the Knight Chess Piece model is finished. Below is the embedded 3D model itself.<br>
+    <iframe src="https://ichat1945.autodesk360.com/shares/public/SH919a0QTf3c32634dcfe18e834d24f80a95?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe><br>
   </p>
   <p>
     The other assignment was to create a music box with a movable lid with parametrics. Having a parametric design allows it to be
     edited seamlessly by changing certain variables instead of editing every single affected part of the 3D model.<br>
     Before we start 3D modelling, we have to set our variables first.<br>
     Here are the variables set in this model.<br>
-    (attach ss)<br>
+    <img src="./images/laser cutting/parametrics"width="80%"><br>
     To start off, we must create a basic box (without the lid).<br>
     A rectangle was first sketched and dimensioned to the length and height mentioned above. One set of tabs is also sketched and 
     dimensioned according to our predefined variables. It is then extruded to our set thickness as a "New Body" operation.<br>
-    Next, another extrusion is performed, this time as a "Cut" function to cut away the tabs so that our box can be assembled once laser cut.
+    <img src="./images/laser cutting/face 1 sketch"width="80%"><br>
+    Next, another extrusion is performed, this time as a Cut function to cut away the tabs so that our box can be assembled once laser cut.
     Afterwards, I patterned the tabs twice in two directions, once across the length of the box and along the box height twice (both sides).<br>
-    (ss)<br>
+    <img src="./images/laser cutting/tab creation"width="80%"><br>
+    <img src="./images/laser cutting/finished tabs side 1"width="80%"><br>
     Now that one face is done, the side of the box (width) has to be done. The same process as creating the first face is made, except it
     is anchored to the front edge of the first tab made. It is dimensioned and constrained via our predefined values, and extruded to our
-    preset thickness afterwards.<br>
-    (ss)<br>
-    The tab spacing along the width of the box is cut and patterned along the width.<br>
-    (ss)<br>
+    preset thickness afterwards. The only difference is that the height of this tab is slightly shorter, and there is a reason behind it which will be explained later.<br>
+    The tab spacing along the width of the box is cut and patterned along the width as shown below.<br>
+    <img src="./images/laser cutting/tab on face 2"width="80%"><br>
     Now that one side of the length and width of the box is done, to make it easier I decided to duplicate both plates by mirroring them.
-    Before I can do that, I need to create 2 sets of sketching planes at the midpoint of each plate using the midplane tool. Once that
-    is done, I can duplicate each face using the mirror tool.<br>
-    (ss)<br>
+    Before I can do that, I need to create 2 sets of sketching planes at the midpoint of each plate using the midplane tool.<br>
+    <img src="./images/laser cutting/midplane 1"width="80%"><br>
+    <img src="./images/laser cutting/midplane 2"width="80%"><br>
+    Once the midplanes are formed, each face can be duplicated via the mirror tool.
+    <img src="./images/laser cutting/body pattern 1"width="80%"><br>
+    <img src="./images/laser cutting/body pattern 2"width="80%"><br>
     To ensure that the tabs integrate with each other and serve their function, I had to ensure each face does not have parts clipping
     into each other. To do that, I used the combine tool. Using one face as the target body and the two perpendicular bodies as the tool
     bodies, the 4 faces will not interfere with each other.<br>
-    (ss)<br>
+    <img src="./images/laser cutting/combine 1"width="80%"><br>
+    <img src="./images/laser cutting/combine 1 (other side)"width="80%"><br>
     With that out of the way, time for the base. A rectangle was sketched and constrained by the outer side of each face created just now.
     It was extruded to our set thickness inwards, intersecting the existing sides.<br>
-    (ss)<br>
+    <img src="./images/laser cutting/base sketch"width="80%"><br>
+    <img src="./images/laser cutting/base extrusion"width="80%"><br>
     To wrap up the base, the combine tool was used one more time to ensure the base does not have any components clipping into the other
     bodies. The 4 sides were selected as tool bodies which were kept after the cut. Now our base of the box is done.<br>
-    (ss)<br>
+    <img src="./images/laser cutting/base combine"width="80%"><br>
     Time for the lid. I decided to make things simple by 3D modelling a hinge that can be laser cut. To start things off, I had to edit
-    the first sketch I made to include the hole for the hinge to fit. <br>
-    (ss)<br>
+    the first sketch I made to include the hole for the hinge to fit.<br>
+    <img src="./images/laser cutting/lid hole sketch"width="80%"><br>
     Next, I extruded and patterened the hole since it is needed on both sides.<br>
-    (ss)<br>
+    <img src="./images/laser cutting/lid hole extrusion"width="80%"><br>
+    <img src="./images/laser cutting/lid hole pattern"width="80%"><br>
     Afterwards, I needed to design the lid. I made a sketch just above the top of the base and sketched a rectangle constrained within
     the interior space of the box. In addition, I added two pegs that will be fitted inside the hole, as well as a slight overhang to 
-    make the box openable.<br>
-    (ss)<br>
-    The lid was then extruded to the preset thickness. Finally, the box is done. Below is the embedded 3D model.<br>
-    (ss)<br>
-
+    make the box openable. Since the pegs are not located at the end of the lid, the excess area needs space in order for the lid to
+    be openable. This is where the shorter faces come into play.<br>
+    <img src="./images/laser cutting/lid sketch"width="80%"><br>
+    The lid was then extruded to the preset thickness. With that, the box is done.<br>
+    <img src="./images/laser cutting/lid extrusion"width="80%"><br>
+    Below is the embedded 3D model:<br>
+    <iframe src="https://ichat1945.autodesk360.com/shares/public/SH919a0QTf3c32634dcf2b7e0c1d769795ae?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe><br>
 
 
 
