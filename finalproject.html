@@ -41,6 +41,71 @@
     </div>
 </nav>     
 <body>
+  <p>The Final Project in this module is a test to apply what we have learnt over the course of this academic semester. <br>
+  <p> 
+    <ul><b>The project can be about anything, provided it met the following criteria:</b>
+      <li>A 3D printed item must be present.</li>
+      <li>A laser cut item must be present.</li>
+      <li>Arduino programming must be included, as well as some wiring of electronics.</li>
+    </ul>
+    All of the items must play a key role in the project. (e.g. the 3D printed item cannot be there as a placeholder)<br>
+    In addition, we needed to make a 1-minute video about the project, an A4 sized poster about it as well as document the processes
+    made over the course of this project.<br>
+  </p>
+  <p> 
+  For my Final Project, I decided to try something different. I decided to group up with two of my classmates, <a href="https://justeenie.github.io/home.html">Justin</a> and <a href="https://ngliangg.github.io/DFABWebsite/">Guo Liang</a> to make one big project.<br>
+  We decided to make a coin sorter that could count and sort out the newest generation of Singapore coins.<br>
+</p>
+  <p>
+  Before we could start on the project, we had to define what each member had to do. I decided to focus on the input system of the coin sorter.<br>
+
+  <h1>Prototyping</h1>
+  <p>To figure out how to make a proper coin sorter, we needed to figure out potential problems we might need to tackle.<br>
+  One such problem was ensuring the coins fall one at a time. This would ensure that the coins do not overlap, and gives the counting
+  system some time in case the system could only scan one type of coin at a time.
+  Next, I had to figure out how the wheel was going to be powered. I initially went with a DC motor as it was the only motor I was 
+  given to work with. However, as I would soon find out, the motor was not a good fit. 
+</p>
+<h1>CAD (3D Modelling)</h1>
+<p>To model out the wheel, a few things must be considered.<br>
+  Firstly, it has to be slightly thicker than a 5 cent coin. It had to be thin enough to be 3D printable, while ensuring 
+  the wheel was not thick enough that any combination of coins could stack and get caught in the wheel simultaneously.<br>
+  I decided to make the wheel about 10cm in diameter to make sure the wheel was large enough to make the holes big enough to scoop
+  the coins.<br>
+  Each hole would be constrained to the tangent of the larger circle as seen in the sketch below.<br>
+  ss<br>
+  I decided to sketch two lines from the two furthest edges of the circle hole to the edge of the wheel to make sure the coins can sit properly
+  in the wheel.<br>
+  ss<br>
+  With the first hole done, I patterned it along the wheel to make 3 more holes for efficiency's sake.
+  Afterwards, I made a hole in the center of the wheel to accomodate the motor which will be powering the wheel.
+  Finally, I extruded the wheel to the desired thickness of 1.25mm, which is just slightly thicker than a 5 cent coin. For reference, a 5 cent coin is 1.22mm thick, <a href="https://www.mas.gov.sg/currency/Singapores-Circulation-Currency-Coins">according to the Monetary Authority of Singapore.</a>
+  A notch was created to improve the stability of the wheel.
+
+  Arduino Case Supports:
+  To ensure the Arduino is well anchored into the sorter, I had to make a support box for it. For this model, I decided to reference 
+  an old model I had created in this module. I made a copy of the old laser cut box and removed the lid plus hinge systems.<br>
+  With the base and sides left, I edited the parametrics to ensure the Arduino UNO can fit. The following changes were made:
+  <ul>
+    <li>Changed thickness to 5mm</li>
+    <li>Adjusted length, with and height.</li>
+    <li>Added 2 holes at the side for USB input and battery power.</li>
+  </ul>
+
+</p>
+<h1>Model Creation</h1>
+<p>3D Printing:
+  Laser Cutting:
+  Wiring:
+  Arduino Programming:
+</p>
+<h1>Assembly, Integration and Troubleshooting</h1>
+  <p></p>
+<h1>Final Product</h1>
+<p></p>
+<h1>Reflections</h1>
+  <p></p>
+  </p>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
     crossorigin="anonymous"></script>
