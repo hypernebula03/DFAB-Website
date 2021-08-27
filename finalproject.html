@@ -94,17 +94,58 @@
 
 </p>
 <h1>Model Creation</h1>
-<p>3D Printing:
-  Laser Cutting:
-  Wiring:
-  Arduino Programming:
+<p>3D Printing:<br>
+  To create the coin wheel, I decided to lay it flat on the suface of the 3D printing bed to make printing easier. That way, the 3D printer layers 
+  would be printing the thickness of the wheel, rather than the diameter of the wheel. Other settings were not changed from the last time I used Cura to 3D print
+  my knight chess piece.<br>
+
+  Laser Cutting:<br>
+  Initially, I made the box with just one hole for the USB input. However, after the first cut, I realised that not only would the Arduino not fit, 
+  but also the hole would be necessary as a power source. Thus, I went to make the necessary changes and cut it a second time. <br>
+  I also had a box designed for my DC motor to power the wheel, but it had to be abandoned after I realised the motor would not be a good 
+  fit (the speed was too fast)<br>
+  In its place two supports will be 3D printed to anchor the new stepper motor to the coin pouch done by Guo Liang.
+
+  Wiring:<br>
+  Wiring was not too big of an issue since the only wiring I needed to do was to connect the stepper motor to the breadboard. No resistors
+  were needed, thus it could be connected straight to 5V and GND.
+
+  Arduino Programming:<br>
+  I decided to <a href="https://www.instructables.com/BYJ48-Stepper-Motor/">use a reference code made by Mohannad Rawashdeh</a> to assist me. The code linked is meant to be used as a bi-directional motor
+  which will count down a fixed number of steps, stops for a second and changes direction.<br>
+  I decided to change the input pins from 8 - 11 to pins 9 - 12 to accomodate other input pins used by Justin and Guo Liang's section of this project.<br>
+  <ul> <b> To ensure the motor works the way I want it to, I removed a few things:</b>
+    <li>if(Direction==0){ Steps--; } Removed to ensure the motor does not change direction under the SetDirection function of the code.</li>
+    <li> This section of the code was removed as no delay or reversing direction is needed.<br> "Serial.println(time);<br>
+      Serial.println("Wait...!");<br>
+      delay(2000);<br>
+      Direction=!Direction;<br>
+      steps_left=4095;"<br></li>
+    <li>I also removed "while(steps_left>0)" during integration with Justin and Guo Liang's code to ensure the code would not be stuck running the void loop function.</li>
+  </ul>
+  One thing to note is that since the stepper motor isn't that fast to begin with, there is no need to set a speed/
 </p>
 <h1>Assembly, Integration and Troubleshooting</h1>
-  <p></p>
+  <p>Since this is a group project, this section would be by far the hardest part out of all.
+    Integration is where problems would arise and where troubleshooting gets very tiring.<br>
+    After the coin pouch was printed, we realised that there were a few problems.<br>
+    First was that the pouch was extremely tight, so much that the stepper motor lacked the torque to power the wheel smoothly.
+    Thus, the wheel had to be sanded quite a bit and the pouch needed some filing to ensure no bumps in the wheel movements. <br>
+    The pouch was also not angled steep enough to make sure all coins were positioned vertically for the wheel to scoop up. 
+    Thus, it had to be re-adjusted so the pouch, wheel and motor are positioned horizontally, above the track where the coins get sorted.<br>
+    Integrating the code was also another problem. While integrating the code, I had to shift my input ports by 1. I also had to troubleshoot
+    any issues such as the code only executing the stepper motor section due to it being stuck in the while loop "while(steps_left>0)".<br>
+    
+  </p>
 <h1>Final Product</h1>
 <p></p>
 <h1>Reflections</h1>
-  <p></p>
+  <p>In hindsight, this was a very ambitious project to do. Since the project requirements demand each member's contributions
+    fulfil the project requirements, that means that group projects get exponentially harder to fit content for everyone. It also 
+    did not help that all of us had other projects and exams to prepare for, further constraining the amount of time we had to work on the 
+    project. Communication is very important especially in group projects as integration and troubleshooting would be a pain to do without
+  proper communication. I am very thankful to Justin and Guo Liang for their valuable contributions to this project. Without them, this would not
+have been such a success. </p>
   </p>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
