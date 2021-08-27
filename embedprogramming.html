@@ -45,18 +45,25 @@
     <h1>Embedded Programming (Arduino)</h1><br>
     Arduino coding language uses a language similar to C++. The good thing about Arduino is that it combines both software programming
     and electronics to make your engineering systems come to life. <br>
+    Arduino itself uses a software called Arduino IDE for your coding. It is kind of similar to softwares like Visual Studio Code, except it is tailored
+    to Arduino. There are various libraries to reference from for different electronic components (e.g. stepper.h library for stepper motors). You can think 
+    of them as extensions to your base code. Depending on what you want your electronics and code to do, certain libraries will come in handy.<br>
+    Below is Arduino's own library manager. It is where you can choose certain library files to install and include in your code.
+    <img src="./images/embedded programming/arduino library manager" width="80%" /><br>
     Depending on the complexity of your projects, the type of Arduino board you use will vary. For our case, the Arduino UNO will
-    be our focus. The Arduino UNO has 12 Digital Output pins, 5 Analog output pins as well as 3V/5V/Ground pins for wiring. It has a USB connection
+    be our focus. The Arduino UNO has 12 Digital Output pins, 5 Analog output pins as well as 3.3V/5V/Ground pins for wiring. It has a USB connection
     port to upload your code into the Arduino system itself, as well as a power jack for external power sources.<br>
-    ss<br>
+    <img src="./images/embedded programming/arduino.jpg" width="40%" /><br>
+    Below is the pinouts for the Arduino UNO.<a href="https://www.teachmemicro.com/arduino-uno-pinout-diagram/"> Image Reference:</a><br>
+    <img src="./images/embedded programming/arduino pinout.jpg" width="80%" /><br>
     In any Arduino programming, a few things are always necessary to include:<br>
     One of which is defining input and output pins. Depending on what you want to make, certain electronic components require some connection
     to an input or output pin. Note that the input/output pins should align with the hardware wiring, for obvious reasons.<br>
-    <ul><b> Another thing to include is user-defined functions. In any code, there will be user-defined functions that the code should execute. Usually, a user-defined function consists of 4 parts:</b>
+    <ul><b></b> Another thing to include is user-defined functions. In any code, there will be user-defined functions that the code should execute. Usually, a user-defined function consists of 4 parts:</b>
       <li>A reserved word indicating the return data type of the function's return value. (e.g. int, double etc.) If nothing is returned, a "void" function is used.</li>
       <li>Function name.</li>
       <li>Any input data/parameters required by the function. They are contained within parentheses. It can be omitted if no input data is required.</li>
-      <li>Function's statements enclosed in curly brackets {}.</li>
+      <li>Function statements enclosed in curly brackets {}.</li>
     </ul><br>
     For wiring and electronics, a free software that I used was TinkerCAD. For what it's worth, it offers the basic introductory electronic simulation experience. 
     While there are other better softwares to use for electronic simulation such as Multisim, TinkerCAD does its job well. Thus, if you do not have the financial flexibility to purchase an Arduino yourself or get a more advanced electronics simulator, TinkerCAD
