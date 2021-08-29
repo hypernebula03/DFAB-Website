@@ -120,7 +120,15 @@
   Arduino Programming:<br>
   I decided to <a href="https://www.instructables.com/BYJ48-Stepper-Motor/">use a reference code made by Mohannad Rawashdeh</a> to assist me. The code linked is meant to be used as a bi-directional motor
   which will count down a fixed number of steps, stops for a second and changes direction.<br>
-  I decided to change the input pins from 8 - 11 to pins 9 - 12 to accomodate other input pins used by Justin and Guo Liang's section of this project.<br>
+  Variable Definition:<br>
+  <img src="./images/final project/variable definition" width="40%" /><br>
+  Pin Inputs:<br>
+  <img src="./images/final project/pin input" width="40%" /><br>
+  Later on I decided to change the input pins from 8 - 11 to pins 9 - 12 to accomodate other input pins used by Justin and Guo Liang's section of this project.<br>
+  This section of the code creates a loop that forces the motor to keep going.<br>
+  <img src="./images/final project/motor start" width="40%" /><br>
+  This section of code determines the direction the motor goes. In this case it goes clockwise.<br>
+  <img src="./images/final project/motor direction" width="40%" /><br>
   <ul> <b> To ensure the motor works the way I want it to, I removed a few things:</b>
     <li>if(Direction==0){ Steps--; } Removed to ensure the motor does not change direction under the SetDirection function of the code.</li>
     <li> This section of the code was removed as no delay or reversing direction is needed.<br> "Serial.println(time);<br>
