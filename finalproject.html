@@ -25,7 +25,6 @@
       <a class="nav-item nav-link" href="safety.html">Fablab Safety</a>
       <a class="nav-item nav-link" href="software.html">Software</a>
       <a class="nav-item nav-link active" href="finalproject.html">Final Project</a>
-      <a class="nav-item nav-link" href="credits.html">Credits</a>
       <div class="dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
@@ -61,10 +60,13 @@
 
   <h1>Prototyping</h1>
   <p>To figure out how to make a proper coin sorter, we needed to figure out potential problems we might need to tackle.<br>
-  One such problem was ensuring the coins fall one at a time. This would ensure that the coins do not overlap, and gives the counting
-  system some time in case the system could only scan one type of coin at a time.
-  Next, I had to figure out how the wheel was going to be powered. I initially went with a DC motor as it was the only motor I was 
-  given to work with. However, as I would soon find out, the motor was not a good fit. 
+  The base idea was to create a sloped track with slots that fit a certain coin size in ascending size from 5 cents to 1 dollar. The coins
+  would roll down and fall into the assigned track based on the smallest slot that fits the coin. There would be a infared sensor detecting
+  the motion of a coin falling into the system, thus counting the number of coins sorted in this coin sorter system.<br>
+  One such problem was ensuring the coins fall one at a time. This would ensure that the coins do not overlap and fall into the wrong section, as well as giving the counting
+  system some time in case the system could only scan one type of coin at a time.<br>
+  Next, I had to figure out how the wheel was going to be powered. I initially went with a DC motor as it was the only motor I was initially 
+  given to work with. However, as I would soon find out, the motor was not a good fit. <br>
 </p>
 <h1>CAD (3D Modelling)</h1>
 <p>To model out the wheel, a few things must be considered.<br>
@@ -72,16 +74,12 @@
   the wheel was not thick enough that any combination of coins could stack and get caught in the wheel simultaneously.<br>
   I decided to make the wheel about 10cm in diameter to make sure the wheel was large enough to make the holes big enough to scoop
   the coins.<br>
-  Each hole would be constrained to the tangent of the larger circle as seen in the sketch below.<br>
-  ss<br>
-  I decided to sketch two lines from the two furthest edges of the circle hole to the edge of the wheel to make sure the coins can sit properly
-  in the wheel.<br>
-  ss<br>
-  With the first hole done, I patterned it along the wheel to make 3 more holes for efficiency's sake.
+  Holes were added to allow the coins to sit inside the hole.<br>
+  <img src="./images/final project/wheel sketch" width="40%" /><br>
   Afterwards, I made a hole in the center of the wheel to accomodate the motor which will be powering the wheel.
   Finally, I extruded the wheel to the desired thickness of 1.25mm, which is just slightly thicker than a 5 cent coin. For reference, a 5 cent coin is 1.22mm thick, <a href="https://www.mas.gov.sg/currency/Singapores-Circulation-Currency-Coins">according to the Monetary Authority of Singapore.</a>
-  A notch was created to improve the stability of the wheel.
-
+  A notch was created to improve the stability of the wheel.<br>
+  <img src="./images/final project/extrude" width="40%" /><br>
   Arduino Case Supports:
   To ensure the Arduino is well anchored into the sorter, I had to make a support box for it. For this model, I decided to reference 
   an old model I had created in this module. I made a copy of the old laser cut box and removed the lid plus hinge systems.<br>
@@ -90,7 +88,9 @@
     <li>Changed thickness to 5mm</li>
     <li>Adjusted length, with and height.</li>
     <li>Added 2 holes at the side for USB input and battery power.</li>
-  </ul>
+  </ul><br>
+  <img src="./images/final project/hole sketch" width="40%"/>
+  <img src="./images/final project/hole cut" width="40%"/><br>
 
 </p>
 <h1>Model Creation</h1>
@@ -98,13 +98,20 @@
   To create the coin wheel, I decided to lay it flat on the suface of the 3D printing bed to make printing easier. That way, the 3D printer layers 
   would be printing the thickness of the wheel, rather than the diameter of the wheel. Other settings were not changed from the last time I used Cura to 3D print
   my knight chess piece.<br>
-
+  <img src="./images/final project/cura" width="40%"/><br>
+  <video width="80%" height="80%" controls>
+    <source src="./images/final project/wheel print.mp4" type="video/mp4">
+  </video><br>
   Laser Cutting:<br>
   Initially, I made the box with just one hole for the USB input. However, after the first cut, I realised that not only would the Arduino not fit, 
   but also the hole would be necessary as a power source. Thus, I went to make the necessary changes and cut it a second time. <br>
   I also had a box designed for my DC motor to power the wheel, but it had to be abandoned after I realised the motor would not be a good 
-  fit (the speed was too fast)<br>
-  In its place two supports will be 3D printed to anchor the new stepper motor to the coin pouch done by Guo Liang.
+  fit (the speed was too fast). <br>
+  <video width="80%" height="80%" controls>
+    <source src="./images/final project/motor fail.mp4" type="video/mp4">
+  </video><br>
+  Thus, to take its place was a BYJ-48 Stepper Motor. It rotates much slower than the original DC motor I had.<br>
+  In its place two supports will be 3D printed to anchor the new stepper motor to the coin pouch done by Guo Liang.<br>
 
   Wiring:<br>
   Wiring was not too big of an issue since the only wiring I needed to do was to connect the stepper motor to the breadboard. No resistors
@@ -123,7 +130,11 @@
       steps_left=4095;"<br></li>
     <li>I also removed "while(steps_left>0)" during integration with Justin and Guo Liang's code to ensure the code would not be stuck running the void loop function.</li>
   </ul>
-  One thing to note is that since the stepper motor isn't that fast to begin with, there is no need to set a speed/
+  One thing to note is that since the stepper motor isn't that fast to begin with, there is no need to set its speed.<br>
+  Below is how the stepper motor would work:<br>
+  <video width="80%" height="80%" controls>
+    <source src="./images/final project/stepper motor video.mp4" type="video/mp4">
+  </video><br>
 </p>
 <h1>Assembly, Integration and Troubleshooting</h1>
   <p>Since this is a group project, this section would be by far the hardest part out of all.
@@ -133,8 +144,8 @@
     Thus, the wheel had to be sanded quite a bit and the pouch needed some filing to ensure no bumps in the wheel movements. <br>
     The pouch was also not angled steep enough to make sure all coins were positioned vertically for the wheel to scoop up. 
     Thus, it had to be re-adjusted so the pouch, wheel and motor are positioned horizontally, above the track where the coins get sorted.<br>
-    Integrating the code was also another problem. While integrating the code, I had to shift my input ports by 1. I also had to troubleshoot
-    any issues such as the code only executing the stepper motor section due to it being stuck in the while loop "while(steps_left>0)".<br>
+    Integrating the code was also another problem. While integrating the code, I had to change my input ports to pins 10, 11, 12, 13. I also had to troubleshoot
+    issues such as the code only executing the stepper motor section due to it being stuck in the while loop "while(steps_left>0)".<br>
     
   </p>
 <h1>Final Product</h1>
@@ -147,6 +158,10 @@
   proper communication. I am very thankful to Justin and Guo Liang for their valuable contributions to this project. Without them, this would not
 have been such a success. </p>
   </p>
+  <footer>
+    <p>Copyright © Ng Chee Rui, Ethan</p>
+    <img src="./images/gay3.png" width="20%" /><br>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
     crossorigin="anonymous"></script>
